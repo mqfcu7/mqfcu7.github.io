@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>mqfcu7's blog</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2015-02-05T00:00:00+08:00</updated><entry><title>[Python_OpenCV]文件、摄像头和GUI</title><link href="/python_opencvwen-jian-she-xiang-tou-he-gui.html" rel="alternate"></link><updated>2015-02-05T00:00:00+08:00</updated><author><name>mqfcu7</name></author><id>tag:,2015-02-05:python_opencvwen-jian-she-xiang-tou-he-gui.html</id><summary type="html">&lt;blockquote&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>mqfcu7's blog</title><link href="/" rel="alternate"></link><link href="/feeds/python.atom.xml" rel="self"></link><id>/</id><updated>2015-02-05T00:00:00+08:00</updated><entry><title>[Python_OpenCV]文件、摄像头和GUI</title><link href="/python_opencvwen-jian-she-xiang-tou-he-gui.html" rel="alternate"></link><updated>2015-02-05T00:00:00+08:00</updated><author><name>mqfcu7</name></author><id>tag:,2015-02-05:python_opencvwen-jian-she-xiang-tou-he-gui.html</id><summary type="html">&lt;blockquote&gt;
 &lt;ol&gt;
 &lt;li&gt;Joseph Howse, OpenCV Computer Vision with Python, April 2013.&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://wiki.opencv.org.cn/images/4/41/Opencv-ref-man-2.3.1.pdf"&gt;Opencv-ref-man-2.3.1&lt;/a&gt;&lt;/li&gt;

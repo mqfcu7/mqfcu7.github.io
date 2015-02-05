@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>mqfcu7's blog</title><link href="/" rel="alternate"></link><link href="/feeds/pelican.atom.xml" rel="self"></link><id>/</id><updated>2013-11-27T00:00:00+08:00</updated><entry><title>pelican install</title><link href="/pelican-install.html" rel="alternate"></link><updated>2013-11-27T00:00:00+08:00</updated><author><name>mqfcu7</name></author><id>tag:,2013-11-27:pelican-install.html</id><summary type="html">&lt;h1&gt;车牌识别数据集建设计划&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;经与小王讨论，本数据集建设目前仅标注图片中&lt;strong&gt;车牌的位置和牌照号&lt;/strong&gt;。车牌识别数据集建立分四个阶段：
+1. &lt;strong&gt;预处理阶段&lt;/strong&gt; 原始数据分类整理；
+2. &lt;strong&gt;“磨刀”阶段&lt;/strong&gt; 标注工具优化、标注格式定义、标注文档书写；
+3. &lt;strong&gt;标注阶段&lt;/strong&gt; 正式对分类好的数据进行标注；
+4. &lt;strong&gt;校验阶段&lt;/strong&gt; 对标注结果进行格式检查和人工核对。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4&gt;一、预处理阶段&lt;/h4&gt;
+&lt;p&gt;我们将建设如下车牌数据集：
+1. 建设车牌质量数据目录
+    * 6种类型：质量良好、背光、曝光过库、车牌污损、车牌部分遮挡、模拟相机拍摄
+    * 每种至少200张
+2. 建设各时段数据目录
+    * 7种类型：白天、清晨、傍晚、夜间、雾霾、下雪、下雨
+    * 每种至少200张
+3. 建设各车牌类型目录
+    * 8种类型:蓝牌、单层黄牌、双层黄牌、黑牌、白牌、警牌、武警牌、军牌
+    * 每种至少200张
+4. 建设各省份目绿
+    * 30多个省份
+    * 每个省份少200张&lt;/p&gt;
+&lt;p&gt;这里的工作需由有公司人员承担，其原因有两点：
+&lt;em&gt; 原始数据放在公司服务器上，且存取容量较大；
+&lt;/em&gt; 上述有些车牌分类带很强的主观性，用文字准确描述非常困难；&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;该阶段工作计划由小鲍承担，工作量为全工作日3天左右。&lt;/strong&gt;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h4&gt;二、“磨刀”阶段&lt;/h4&gt;
+&lt;p&gt;这里的工作包括：标注格式定义、标注工具优化、标注文档书写。
+&lt;strong&gt;该阶段工作计划由鲁帅主承担，和小王讨论，工作量为全工作日2天左右。&lt;/strong&gt;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h4&gt;三、标注阶段&lt;/h4&gt;
+&lt;p&gt;将预处理阶段整理的文件，利用标注工具，依照标注文档进行车牌标注。初步估算，待标注的图片量为&lt;strong&gt;10200&lt;/strong&gt;张。由小王车牌识别优化工作的需求，该阶段进行的周期控制在2-3周内完成。我们对选择公司内还是公司外承担，进行了如下思考，供冯老师参考：
+1. 如果为公司内（行政部）承担，由于交流便利，沟通成本小，该工作必能迅速开展，预期1个礼拜便能完成；
+2. 如果为公司外承担，这需要冯老师去寻找第三方、洽谈、签定合同、付款、跟进、沟通等等，若有良好的跟进也能2-3周内完成（&lt;em&gt;鲁帅不承担与第三方的沟通&lt;/em&gt;）。&lt;/p&gt;
+&lt;p&gt;无论最终由哪方承担，都应该有以下标注结果check过程：
+&lt;em&gt; 少量数据标注，用于反馈标注是否按要求进行，比如先标10张图片，然后我们审核一下，如有问题便指出，再重复该过程，直到没问题再进入下一步；
+&lt;/em&gt; 一定量数据标注，当标注到一定规模，可能会暴露一些其它问题，标注完成2-3个类型（文件夹），再审核一下；
+* 大量数据标注，审核完成。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;为保证标注结果高质量，建议同一份数据由两个人员都进行标注&lt;/strong&gt;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h4&gt;四、校验阶段&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;编写脚步，对标注结果进行格式检查；&lt;/li&gt;
+&lt;li&gt;抽样标注结果，进行人工核对；&lt;/li&gt;
+&lt;li&gt;对该数据文件组织存放，并多份拷贝备份。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;该工作计划由鲁帅承担，工作量为1天。&lt;/strong&gt;&lt;/p&gt;</summary><category term="pelican"></category></entry></feed>

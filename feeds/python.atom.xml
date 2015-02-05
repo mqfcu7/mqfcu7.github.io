@@ -82,4 +82,131 @@
     &lt;span class="n"&gt;_&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;frame&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;capture&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 
 &lt;span class="n"&gt;cv2&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;destroyWindow&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;Video&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</summary><category term="OpenCV"></category></entry></feed>
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="OpenCV"></category></entry><entry><title>系统托盘图标</title><link href="/xi-tong-tuo-pan-tu-biao.html" rel="alternate"></link><updated>2015-02-05T00:00:00+08:00</updated><author><name>mqfcu7</name></author><id>tag:,2015-02-05:xi-tong-tuo-pan-tu-biao.html</id><summary type="html">&lt;hr /&gt;
+&lt;h4&gt;显示/隐藏控制台&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;h5&gt;types.windll.kernel32.GetConsoleWindow()&lt;/h5&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&amp;gt;&amp;gt;获取当前控制台窗口的句柄
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h5&gt;ctypes.windll.user32.ShowWindow(wHnd, flag)&lt;/h5&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&amp;gt;&amp;gt;显示/隐藏窗口
+&amp;gt;&amp;gt;wHnd为窗口句柄。flag为0时隐藏窗口，为1时显示窗口
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/blockquote&gt;
+&lt;hr /&gt;
+&lt;h3&gt;wxPython&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;wxPython是wxWidgets的python绑定。
+wxWidgets 是一系列C++库，它遵循多平台GUI开发框架的设计规则。它有类似于MFC易于使用的API。把它和特定的库链接并编译，可是你的应用程序与目标平台的界面相似。wxWidgets 是一个非常完整的框架，它几乎为你任何需求提供解决方案，并简化使用习惯。
+官网：http://www.wxpython.org/
+文档：http://docs.wxwidgets.org/2.8.4/wx_contents.html&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4&gt;1. Hello World&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;#!/usr/bin/env python&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;wx&lt;/span&gt;
+
+&lt;span class="n"&gt;app&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;wx&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;App&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c"&gt;# Create a new app, don&amp;#39;t redirect stdout/stderr to a window.&lt;/span&gt;
+&lt;span class="n"&gt;frame&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;wx&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Frame&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;None&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;wx&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ID_ANY&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Hello World&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c"&gt;# A Frame is a top-level window.&lt;/span&gt;
+&lt;span class="n"&gt;frame&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Show&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;     &lt;span class="c"&gt;# Show the frame.&lt;/span&gt;
+&lt;span class="n"&gt;app&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;MainLoop&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;blockquote&gt;
+&lt;h5&gt;wx.App(False)&lt;/h5&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&amp;gt;&amp;gt;每一个wxPython程序都是wx.App的一个实例。当需要更复杂的功能是需要扩展wx.App类
+&amp;gt;&amp;gt;False表示不将stdout和stderr重定向到一个窗口
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h5&gt;wx.Frame(None,wx.ID_ANY,"Hello")&lt;/h5&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&amp;gt;&amp;gt;一个wx.Frame是一个顶层窗口。
+&amp;gt;&amp;gt;None表示没有父元素，wx.ID_ANY表示由wxWidgets自动选择ID，“Hello”为标题
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h5&gt;frame.Show(True)&lt;/h5&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&amp;gt;&amp;gt;显示窗口
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h5&gt;app.MainLoop()&lt;/h5&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&amp;gt;&amp;gt;开始主循环，处理各个事件
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/blockquote&gt;
+&lt;h4&gt;2. 事件&lt;/h4&gt;
+&lt;p&gt;所有事件都是一个EVT_*对象，它指明了事件类型。事件处理回调函数需要被绑定到事件。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;h5&gt;EvtHandler::Bind(event, handler, source=None, id=wx.ID_ANY, id2=wx.ID_ANY)&lt;/h5&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&amp;gt;&amp;gt;bind将事件对象和回调函数进行绑定
+&amp;gt;&amp;gt;bind是EvtHandle类的一个方法，该类被大多数类继承，因此可以直接调用bind方法
+&amp;gt;&amp;gt;event即EVT_*对象，表示事件类型。handle即事件处理回调函数。source用来分辨触发相同事件的不同部件。当有许多按钮、菜单等时，用id来分辨他们。id2用来绑定范围内的所有id。
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h5&gt;Callback(self, event)&lt;/h5&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&amp;gt;&amp;gt;回调函数原型
+&amp;gt;&amp;gt;event是wx.Event的子类的一个实例
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/blockquote&gt;
+&lt;h4&gt;3. MenuItem类&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;h5&gt;wxMenuItem::wxMenuItem(wxMenu&lt;em&gt; parentMenu = NULL, int id = wxID_SEPARATOR, const wxString&amp;amp; text = "", const wxString&amp;amp; helpString = "", wxItemKind kind = wxITEM_NORMAL, wxMenu&lt;/em&gt; subMenu = NULL)&lt;/h5&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&amp;gt;&amp;gt;构造函数，创建一个菜单项
+&amp;gt;&amp;gt;parentMenu为该菜单项隶属的菜单。id为为菜单项的标示符，默认 wxID_SEPARATOR表示该项为一个分隔符。text为菜单项内容，默认为空。helpString为状态栏显示的帮助内容，默认为空。kind为菜单项样式，可以为单选、复选，默认为正常。subMenu为子菜单，默认无。
+&amp;gt;&amp;gt;id可由wx.NewId()产生一个不重复的id
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h5&gt;wxMenuItem::Enable(bool enable = true)&lt;/h5&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&amp;gt;&amp;gt;使能 一个菜单项。若菜单项被disable，则显示变灰且无法响应事件。
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/blockquote&gt;
+&lt;h4&gt;4. Menu类&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;h5&gt;wxMenu::wxMenu(const wxString&amp;amp; title = "", long style = 0)&lt;/h5&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&amp;gt;&amp;gt;构造函数，创建一个菜单。
+&amp;gt;&amp;gt;titile为标题，默认为空。
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h5&gt;wxMenu::Append(wxMenuItem* menuItem)&lt;/h5&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&amp;gt;&amp;gt;将一个菜单项加入菜单
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h5&gt;wxMenu::AppendSeparator()&lt;/h5&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&amp;gt;&amp;gt;为菜单添加一个分隔符项
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/blockquote&gt;
+&lt;h4&gt;5. TaskBarIcon类&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;该类负责在系统托盘上显示图标，并处理相关事件。&lt;/p&gt;
+&lt;h5&gt;TaskBarIcon::SetIcon(self, icon, tooltip)&lt;/h5&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&amp;gt;&amp;gt;设置系统托盘的图标
+&amp;gt;&amp;gt;icon为图标，可由位图文件转换，见下。tooltip为鼠标在图标上悬停时显示的文字。
+&amp;gt;&amp;gt;`img = wx.Bitmap(path)`
+&amp;gt;&amp;gt;`icon = wx.IconFromBitmap(img)`
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h5&gt;TaskBarIcon::CreatePopupMenu(self)&lt;/h5&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&amp;gt;&amp;gt;生成右键菜单，继承的类必须重写该方法以定制右键菜单。
+&amp;gt;&amp;gt;该方法必选返回一个menu实例。
+&amp;gt;&amp;gt;**每次单击右键，TaskBarIcon类都会调用该方法生成一个新的menu。因此保存menu变量是无效的，对menuItem的使能也必须在该方法内完成。**
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/blockquote&gt;</summary><category term="Python"></category></entry></feed>

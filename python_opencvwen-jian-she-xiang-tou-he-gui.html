@@ -1,43 +1,67 @@
 <!DOCTYPE html>
-<html lang="zh">
-<head>
-        <meta charset="utf-8" />
-        <title>[Python_OpenCV]文件、摄像头和GUI</title>
-        <link rel="stylesheet" href="/theme/css/main.css" />
-        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="mqfcu7's blog Atom Feed" />
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="mqfcu7" />
+        <meta name="copyright" content="mqfcu7" />
 
-        <!--[if IE]>
-            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
-</head>
-
-<body id="index" class="home">
-        <header id="banner" class="body">
-                <h1><a href="/">mqfcu7's blog </a></h1>
-                <nav><ul>
-                    <li class="active"><a href="/category/python.html">Python</a></li>
-                </ul></nav>
-        </header><!-- /#banner -->
-<section id="content" class="body">
-  <article>
-    <header>
-      <h1 class="entry-title">
-        <a href="/python_opencvwen-jian-she-xiang-tou-he-gui.html" rel="bookmark"
-           title="Permalink to [Python_OpenCV]文件、摄像头和GUI">[Python_OpenCV]文件、摄像头和GUI</a></h1>
+<meta name="keywords" content="OpenCV, Python, " />
+        <title>[Python_OpenCV]文件、摄像头和GUI  · mqfcu7's blog
+</title>
+        <link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="/theme/css/style.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="/theme/css/solarizedlight.css" media="screen">
+        <link rel="shortcut icon" href="/theme/images/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="/theme/images/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" sizes="57x57" href="/theme/images/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="/theme/images/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="/theme/images/apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="/theme/images/apple-touch-icon-144x144.png" />
+        <link rel="icon" href="/theme/images/apple-touch-icon-144x144.png" />
+        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="mqfcu7's blog - Full Atom Feed" />
+        <link href="/feeds/Python.atom.xml" type="application/atom+xml" rel="alternate" title="mqfcu7's blog - Python Category Atom Feed" />
+        <link href="/feeds/Work.atom.xml" type="application/atom+xml" rel="alternate" title="mqfcu7's blog - Work Category Atom Feed" />
+    </head>
+    <body>
+        <div id="content-sans-footer">
+        <div class="navbar navbar-static-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="/"><span class=site-name>mqfcu7's blog</span></a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav pull-right top-menu">
+                            <li ><a href="">Home</a></li>
+                            <li ><a href="/categories.html">Categories</a></li>
+                            <li ><a href="/tags.html">Tags</a></li>
+                            <li ><a href="/archives.html">Archives</a></li>
+                            <li><form class="navbar-search" action="/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span1"></div>
+                <div class="span10">
+<article>
+<div class="row-fluid">
+    <header class="page_header span10 offset2">
+    <h1><a href="/python_opencvwen-jian-she-xiang-tou-he-gui.html"> [Python_OpenCV]文件、摄像头和GUI  </a></h1>
     </header>
+</div>
 
-    <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2015-02-05T00:00:00+08:00">
-                Published: 周四 05 二月 2015
-        </abbr>
+<div class="row-fluid">
+        <div class="span8 offset2 article-content">
 
-        <address class="vcard author">
-                By                         <a class="url fn" href="/author/mqfcu7.html">mqfcu7</a>
-        </address>
-<p>In <a href="/category/python.html">Python</a>. </p>
-<p>tags: <a href="/tag/opencv.html">OpenCV</a> </p>
-</footer><!-- /.post-info -->      <blockquote>
+            <blockquote>
 <ol>
 <li>Joseph Howse, OpenCV Computer Vision with Python, April 2013.</li>
 <li><a href="http://wiki.opencv.org.cn/images/4/41/Opencv-ref-man-2.3.1.pdf">Opencv-ref-man-2.3.1</a></li>
@@ -121,38 +145,55 @@
 
 <span class="n">cv2</span><span class="o">.</span><span class="n">destroyWindow</span><span class="p">(</span><span class="s">&#39;Video&#39;</span><span class="p">)</span>
 </pre></div>
-    </div><!-- /.entry-content -->
+            <aside>
+            <hr/>
+            <nav>
+            <ul class="articles_timeline">
+ 
+                <li class="previous_article">« <a href="/xi-tong-tuo-pan-tu-biao.html" title="Previous: 系统托盘图标">系统托盘图标</a></li>
+ 
+                <li class="next_article"><a href="/che-liang-yan-se-shi-bie-suan-fa-ji-hua.html" title="Next: 车辆颜色识别算法计划">车辆颜色识别算法计划</a> »</li>
+            </ul>
+            </nav>
+            </aside>
+        </div>
+        <section>
+        <div class="span2" style="float:right;font-size:0.9em;">
+ 
+            <h4>Published</h4>
+            <time pubdate="pubdate" datetime="2015-02-05T00:00:00+08:00">二月 5, 2015</time>
+            <h4>Category</h4>
+            <a class="category-link" href="/categories.html#Python-ref">Python</a> 
+            <h4>Tags</h4>
+            <ul class="list-of-tags tags-in-article"> 
+                <li><a href="/tags.html#OpenCV-ref">OpenCV
+                    <span>1</span>
+</a></li>
+            </ul>
 
-  </article>
-</section>
-        <section id="extras" class="body">
-                <div class="blogroll">
-                        <h2>blogroll</h2>
-                        <ul>
-                            <li><a href="http://getpelican.com/">Pelican</a></li>
-                            <li><a href="http://python.org/">Python.org</a></li>
-                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
-                            <li><a href="#">You can modify those links in your config file</a></li>
-                        </ul>
-                </div><!-- /.blogroll -->
-                <div class="social">
-                        <h2>social</h2>
-                        <ul>
-                            <li><a href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
+        </div>
+        </section>
+</div>
+</article>
+                </div>
+                <div class="span1"></div>
+            </div>
+        </div>
+    </div>
+<footer>
+<div id="footer">
+    <ul class="footer-content">
+        <li class="elegant-power">Powered by <a href="http://getpelican.com/" title="Pelican Home Page">Pelican</a>. Theme: <a href="http://oncrashreboot.com/pelican-elegant" title="Theme Elegant Home Page">Elegant</a> by <a href="http://oncrashreboot.com" title="Talha Mansoor Home Page">Talha Mansoor</a></li>
+    </ul>
+</div>
+</footer>            <script src="http://code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
 
-                            <li><a href="#">You can add links in your config file</a></li>
-                            <li><a href="#">Another social link</a></li>
-                        </ul>
-                </div><!-- /.social -->
-        </section><!-- /#extras -->
-
-        <footer id="contentinfo" class="body">
-                <address id="about" class="vcard body">
-                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
-                </address><!-- /#about -->
-
-                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
-        </footer><!-- /#contentinfo -->
-
-</body>
+    </body>
 </html>

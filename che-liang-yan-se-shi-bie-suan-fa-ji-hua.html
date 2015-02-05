@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="mqfcu7" />
+        <meta name="copyright" content="mqfcu7" />
+
+<meta name="keywords" content="Algorithm, Work, " />
+        <title>车辆颜色识别算法计划  · mqfcu7's blog
+</title>
+        <link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="/theme/css/style.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="/theme/css/solarizedlight.css" media="screen">
+        <link rel="shortcut icon" href="/theme/images/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="/theme/images/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" sizes="57x57" href="/theme/images/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="/theme/images/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="/theme/images/apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="/theme/images/apple-touch-icon-144x144.png" />
+        <link rel="icon" href="/theme/images/apple-touch-icon-144x144.png" />
+        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="mqfcu7's blog - Full Atom Feed" />
+        <link href="/feeds/Python.atom.xml" type="application/atom+xml" rel="alternate" title="mqfcu7's blog - Python Category Atom Feed" />
+        <link href="/feeds/Work.atom.xml" type="application/atom+xml" rel="alternate" title="mqfcu7's blog - Work Category Atom Feed" />
+    </head>
+    <body>
+        <div id="content-sans-footer">
+        <div class="navbar navbar-static-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="/"><span class=site-name>mqfcu7's blog</span></a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav pull-right top-menu">
+                            <li ><a href="">Home</a></li>
+                            <li ><a href="/categories.html">Categories</a></li>
+                            <li ><a href="/tags.html">Tags</a></li>
+                            <li ><a href="/archives.html">Archives</a></li>
+                            <li><form class="navbar-search" action="/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span1"></div>
+                <div class="span10">
+<article>
+<div class="row-fluid">
+    <header class="page_header span10 offset2">
+    <h1><a href="/che-liang-yan-se-shi-bie-suan-fa-ji-hua.html"> 车辆颜色识别算法计划  </a></h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+        <div class="span8 offset2 article-content">
+
+            <blockquote>
+<p>经与小王讨论，本数据集建设目前仅标注图片中<strong>车牌的位置和牌照号</strong>。车牌识别数据集建立分四个阶段：
+1. <strong>预处理阶段</strong> 原始数据分类整理；
+2. <strong>“磨刀”阶段</strong> 标注工具优化、标注格式定义、标注文档书写；
+3. <strong>标注阶段</strong> 正式对分类好的数据进行标注；
+4. <strong>校验阶段</strong> 对标注结果进行格式检查和人工核对。</p>
+</blockquote>
+<h4>一、预处理阶段</h4>
+<p>我们将建设如下车牌数据集：
+1. 建设车牌质量数据目录
+    * 6种类型：质量良好、背光、曝光过库、车牌污损、车牌部分遮挡、模拟相机拍摄
+    * 每种至少200张
+2. 建设各时段数据目录
+    * 7种类型：白天、清晨、傍晚、夜间、雾霾、下雪、下雨
+    * 每种至少200张
+3. 建设各车牌类型目录
+    * 8种类型:蓝牌、单层黄牌、双层黄牌、黑牌、白牌、警牌、武警牌、军牌
+    * 每种至少200张
+4. 建设各省份目绿
+    * 30多个省份
+    * 每个省份少200张</p>
+<p>这里的工作需由有公司人员承担，其原因有两点：
+<em> 原始数据放在公司服务器上，且存取容量较大；
+</em> 上述有些车牌分类带很强的主观性，用文字准确描述非常困难；</p>
+<p><strong>该阶段工作计划由小鲍承担，工作量为全工作日3天左右。</strong></p>
+<hr />
+<h4>二、“磨刀”阶段</h4>
+<p>这里的工作包括：标注格式定义、标注工具优化、标注文档书写。
+<strong>该阶段工作计划由鲁帅主承担，和小王讨论，工作量为全工作日2天左右。</strong></p>
+<hr />
+<h4>三、标注阶段</h4>
+<p>将预处理阶段整理的文件，利用标注工具，依照标注文档进行车牌标注。初步估算，待标注的图片量为<strong>10200</strong>张。由小王车牌识别优化工作的需求，该阶段进行的周期控制在2-3周内完成。我们对选择公司内还是公司外承担，进行了如下思考，供冯老师参考：
+1. 如果为公司内（行政部）承担，由于交流便利，沟通成本小，该工作必能迅速开展，预期1个礼拜便能完成；
+2. 如果为公司外承担，这需要冯老师去寻找第三方、洽谈、签定合同、付款、跟进、沟通等等，若有良好的跟进也能2-3周内完成（<em>鲁帅不承担与第三方的沟通</em>）。</p>
+<p>无论最终由哪方承担，都应该有以下标注结果check过程：
+<em> 少量数据标注，用于反馈标注是否按要求进行，比如先标10张图片，然后我们审核一下，如有问题便指出，再重复该过程，直到没问题再进入下一步；
+</em> 一定量数据标注，当标注到一定规模，可能会暴露一些其它问题，标注完成2-3个类型（文件夹），再审核一下；
+* 大量数据标注，审核完成。</p>
+<p><strong>为保证标注结果高质量，建议同一份数据由两个人员都进行标注</strong></p>
+<hr />
+<h4>四、校验阶段</h4>
+<ul>
+<li>编写脚步，对标注结果进行格式检查；</li>
+<li>抽样标注结果，进行人工核对；</li>
+<li>对该数据文件组织存放，并多份拷贝备份。</li>
+</ul>
+<p><strong>该工作计划由鲁帅承担，工作量为1天。</strong></p>
+            <aside>
+            <hr/>
+            <nav>
+            <ul class="articles_timeline">
+ 
+                <li class="previous_article">« <a href="/python_opencvwen-jian-she-xiang-tou-he-gui.html" title="Previous: [Python_OpenCV]文件、摄像头和GUI">[Python_OpenCV]文件、摄像头和GUI</a></li>
+            </ul>
+            </nav>
+            </aside>
+        </div>
+        <section>
+        <div class="span2" style="float:right;font-size:0.9em;">
+ 
+            <h4>Published</h4>
+            <time pubdate="pubdate" datetime="2015-02-05T00:00:00+08:00">二月 5, 2015</time>
+            <h4>Category</h4>
+            <a class="category-link" href="/categories.html#Work-ref">Work</a> 
+            <h4>Tags</h4>
+            <ul class="list-of-tags tags-in-article"> 
+                <li><a href="/tags.html#Algorithm-ref">Algorithm
+                    <span>1</span>
+</a></li>
+            </ul>
+
+        </div>
+        </section>
+</div>
+</article>
+                </div>
+                <div class="span1"></div>
+            </div>
+        </div>
+    </div>
+<footer>
+<div id="footer">
+    <ul class="footer-content">
+        <li class="elegant-power">Powered by <a href="http://getpelican.com/" title="Pelican Home Page">Pelican</a>. Theme: <a href="http://oncrashreboot.com/pelican-elegant" title="Theme Elegant Home Page">Elegant</a> by <a href="http://oncrashreboot.com" title="Talha Mansoor Home Page">Talha Mansoor</a></li>
+    </ul>
+</div>
+</footer>            <script src="http://code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+    </body>
+</html>

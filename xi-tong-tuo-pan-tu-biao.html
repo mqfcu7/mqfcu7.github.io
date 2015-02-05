@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="mqfcu7" />
+        <meta name="copyright" content="mqfcu7" />
+
+<meta name="keywords" content="Python, Python, " />
+        <title>系统托盘图标  · mqfcu7's blog
+</title>
+        <link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="/theme/css/style.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="/theme/css/solarizedlight.css" media="screen">
+        <link rel="shortcut icon" href="/theme/images/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="/theme/images/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" sizes="57x57" href="/theme/images/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="/theme/images/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="/theme/images/apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="/theme/images/apple-touch-icon-144x144.png" />
+        <link rel="icon" href="/theme/images/apple-touch-icon-144x144.png" />
+        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="mqfcu7's blog - Full Atom Feed" />
+        <link href="/feeds/Python.atom.xml" type="application/atom+xml" rel="alternate" title="mqfcu7's blog - Python Category Atom Feed" />
+        <link href="/feeds/Work.atom.xml" type="application/atom+xml" rel="alternate" title="mqfcu7's blog - Work Category Atom Feed" />
+    </head>
+    <body>
+        <div id="content-sans-footer">
+        <div class="navbar navbar-static-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="/"><span class=site-name>mqfcu7's blog</span></a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav pull-right top-menu">
+                            <li ><a href="">Home</a></li>
+                            <li ><a href="/categories.html">Categories</a></li>
+                            <li ><a href="/tags.html">Tags</a></li>
+                            <li ><a href="/archives.html">Archives</a></li>
+                            <li><form class="navbar-search" action="/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span1"></div>
+                <div class="span10">
+<article>
+<div class="row-fluid">
+    <header class="page_header span10 offset2">
+    <h1><a href="/xi-tong-tuo-pan-tu-biao.html"> 系统托盘图标  </a></h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+        <div class="span8 offset2 article-content">
+
+            <hr />
+<h4>显示/隐藏控制台</h4>
+<blockquote>
+<h5>types.windll.kernel32.GetConsoleWindow()</h5>
+<div class="highlight"><pre>&gt;&gt;获取当前控制台窗口的句柄
+</pre></div>
+
+
+<h5>ctypes.windll.user32.ShowWindow(wHnd, flag)</h5>
+<div class="highlight"><pre>&gt;&gt;显示/隐藏窗口
+&gt;&gt;wHnd为窗口句柄。flag为0时隐藏窗口，为1时显示窗口
+</pre></div>
+
+
+</blockquote>
+<hr />
+<h3>wxPython</h3>
+<blockquote>
+<p>wxPython是wxWidgets的python绑定。
+wxWidgets 是一系列C++库，它遵循多平台GUI开发框架的设计规则。它有类似于MFC易于使用的API。把它和特定的库链接并编译，可是你的应用程序与目标平台的界面相似。wxWidgets 是一个非常完整的框架，它几乎为你任何需求提供解决方案，并简化使用习惯。
+官网：http://www.wxpython.org/
+文档：http://docs.wxwidgets.org/2.8.4/wx_contents.html</p>
+</blockquote>
+<h4>1. Hello World</h4>
+<div class="highlight"><pre><span class="c">#!/usr/bin/env python</span>
+<span class="kn">import</span> <span class="nn">wx</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">wx</span><span class="o">.</span><span class="n">App</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>  <span class="c"># Create a new app, don&#39;t redirect stdout/stderr to a window.</span>
+<span class="n">frame</span> <span class="o">=</span> <span class="n">wx</span><span class="o">.</span><span class="n">Frame</span><span class="p">(</span><span class="bp">None</span><span class="p">,</span> <span class="n">wx</span><span class="o">.</span><span class="n">ID_ANY</span><span class="p">,</span> <span class="s">&quot;Hello World&quot;</span><span class="p">)</span> <span class="c"># A Frame is a top-level window.</span>
+<span class="n">frame</span><span class="o">.</span><span class="n">Show</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>     <span class="c"># Show the frame.</span>
+<span class="n">app</span><span class="o">.</span><span class="n">MainLoop</span><span class="p">()</span>
+</pre></div>
+
+
+<blockquote>
+<h5>wx.App(False)</h5>
+<div class="highlight"><pre>&gt;&gt;每一个wxPython程序都是wx.App的一个实例。当需要更复杂的功能是需要扩展wx.App类
+&gt;&gt;False表示不将stdout和stderr重定向到一个窗口
+</pre></div>
+
+
+<h5>wx.Frame(None,wx.ID_ANY,"Hello")</h5>
+<div class="highlight"><pre>&gt;&gt;一个wx.Frame是一个顶层窗口。
+&gt;&gt;None表示没有父元素，wx.ID_ANY表示由wxWidgets自动选择ID，“Hello”为标题
+</pre></div>
+
+
+<h5>frame.Show(True)</h5>
+<div class="highlight"><pre>&gt;&gt;显示窗口
+</pre></div>
+
+
+<h5>app.MainLoop()</h5>
+<div class="highlight"><pre>&gt;&gt;开始主循环，处理各个事件
+</pre></div>
+
+
+</blockquote>
+<h4>2. 事件</h4>
+<p>所有事件都是一个EVT_*对象，它指明了事件类型。事件处理回调函数需要被绑定到事件。</p>
+<blockquote>
+<h5>EvtHandler::Bind(event, handler, source=None, id=wx.ID_ANY, id2=wx.ID_ANY)</h5>
+<div class="highlight"><pre>&gt;&gt;bind将事件对象和回调函数进行绑定
+&gt;&gt;bind是EvtHandle类的一个方法，该类被大多数类继承，因此可以直接调用bind方法
+&gt;&gt;event即EVT_*对象，表示事件类型。handle即事件处理回调函数。source用来分辨触发相同事件的不同部件。当有许多按钮、菜单等时，用id来分辨他们。id2用来绑定范围内的所有id。
+</pre></div>
+
+
+<h5>Callback(self, event)</h5>
+<div class="highlight"><pre>&gt;&gt;回调函数原型
+&gt;&gt;event是wx.Event的子类的一个实例
+</pre></div>
+
+
+</blockquote>
+<h4>3. MenuItem类</h4>
+<blockquote>
+<h5>wxMenuItem::wxMenuItem(wxMenu<em> parentMenu = NULL, int id = wxID_SEPARATOR, const wxString&amp; text = "", const wxString&amp; helpString = "", wxItemKind kind = wxITEM_NORMAL, wxMenu</em> subMenu = NULL)</h5>
+<div class="highlight"><pre>&gt;&gt;构造函数，创建一个菜单项
+&gt;&gt;parentMenu为该菜单项隶属的菜单。id为为菜单项的标示符，默认 wxID_SEPARATOR表示该项为一个分隔符。text为菜单项内容，默认为空。helpString为状态栏显示的帮助内容，默认为空。kind为菜单项样式，可以为单选、复选，默认为正常。subMenu为子菜单，默认无。
+&gt;&gt;id可由wx.NewId()产生一个不重复的id
+</pre></div>
+
+
+<h5>wxMenuItem::Enable(bool enable = true)</h5>
+<div class="highlight"><pre>&gt;&gt;使能 一个菜单项。若菜单项被disable，则显示变灰且无法响应事件。
+</pre></div>
+
+
+</blockquote>
+<h4>4. Menu类</h4>
+<blockquote>
+<h5>wxMenu::wxMenu(const wxString&amp; title = "", long style = 0)</h5>
+<div class="highlight"><pre>&gt;&gt;构造函数，创建一个菜单。
+&gt;&gt;titile为标题，默认为空。
+</pre></div>
+
+
+<h5>wxMenu::Append(wxMenuItem* menuItem)</h5>
+<div class="highlight"><pre>&gt;&gt;将一个菜单项加入菜单
+</pre></div>
+
+
+<h5>wxMenu::AppendSeparator()</h5>
+<div class="highlight"><pre>&gt;&gt;为菜单添加一个分隔符项
+</pre></div>
+
+
+</blockquote>
+<h4>5. TaskBarIcon类</h4>
+<blockquote>
+<p>该类负责在系统托盘上显示图标，并处理相关事件。</p>
+<h5>TaskBarIcon::SetIcon(self, icon, tooltip)</h5>
+<div class="highlight"><pre>&gt;&gt;设置系统托盘的图标
+&gt;&gt;icon为图标，可由位图文件转换，见下。tooltip为鼠标在图标上悬停时显示的文字。
+&gt;&gt;`img = wx.Bitmap(path)`
+&gt;&gt;`icon = wx.IconFromBitmap(img)`
+</pre></div>
+
+
+<h5>TaskBarIcon::CreatePopupMenu(self)</h5>
+<div class="highlight"><pre>&gt;&gt;生成右键菜单，继承的类必须重写该方法以定制右键菜单。
+&gt;&gt;该方法必选返回一个menu实例。
+&gt;&gt;**每次单击右键，TaskBarIcon类都会调用该方法生成一个新的menu。因此保存menu变量是无效的，对menuItem的使能也必须在该方法内完成。**
+</pre></div>
+
+
+</blockquote>
+            <aside>
+            <hr/>
+            <nav>
+            <ul class="articles_timeline">
+ 
+                <li class="next_article"><a href="/python_opencvwen-jian-she-xiang-tou-he-gui.html" title="Next: [Python_OpenCV]文件、摄像头和GUI">[Python_OpenCV]文件、摄像头和GUI</a> »</li>
+            </ul>
+            </nav>
+            </aside>
+        </div>
+        <section>
+        <div class="span2" style="float:right;font-size:0.9em;">
+ 
+            <h4>Published</h4>
+            <time pubdate="pubdate" datetime="2015-02-05T00:00:00+08:00">二月 5, 2015</time>
+            <h4>Category</h4>
+            <a class="category-link" href="/categories.html#Python-ref">Python</a> 
+            <h4>Tags</h4>
+            <ul class="list-of-tags tags-in-article"> 
+                <li><a href="/tags.html#Python-ref">Python
+                    <span>1</span>
+</a></li>
+            </ul>
+
+        </div>
+        </section>
+</div>
+</article>
+                </div>
+                <div class="span1"></div>
+            </div>
+        </div>
+    </div>
+<footer>
+<div id="footer">
+    <ul class="footer-content">
+        <li class="elegant-power">Powered by <a href="http://getpelican.com/" title="Pelican Home Page">Pelican</a>. Theme: <a href="http://oncrashreboot.com/pelican-elegant" title="Theme Elegant Home Page">Elegant</a> by <a href="http://oncrashreboot.com" title="Talha Mansoor Home Page">Talha Mansoor</a></li>
+    </ul>
+</div>
+</footer>            <script src="http://code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+    </body>
+</html>
